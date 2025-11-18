@@ -14,35 +14,36 @@ const NavBar = ({ isOpen, toggleMenu }) => {
     }, [theme]);
 
     const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+        setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
 
     return (
-        <nav className={`navbar ${isOpen ? 'open' : ''}`}>
+        <nav 
+            className={`navbar ${isOpen ? 'open' : ''}`}
+            onClick={(e) => e.stopPropagation()}   // <-- IMPORTANT
+        >
             <div className='closeIcon'>
-                <FaTimes size={30}
-                className='FaTimes'
-                color='purple'
-                onClick={toggleMenu}/>
+                <FaTimes
+                    size={30}
+                    className='FaTimes'
+                    color='purple'
+                    onClick={(e) => {
+                        e.stopPropagation(); // prevents body click
+                        toggleMenu();
+                    }}
+                />
 
                 {theme === 'light' ? (
-                <FaMoon
-                    size={24}
-                    color='purple'
-                    onClick={toggleTheme}
-                />
+                    <FaMoon size={24} color='purple' onClick={toggleTheme} />
                 ) : (
-                <FaSun
-                    size={24}
-                    color='purple'
-                    onClick={toggleTheme}
-                />
-        )}
+                    <FaSun size={24} color='purple' onClick={toggleTheme} />
+                )}
             </div>
+
             <ul className='list'>
                 <li className='list-items'><a href="#home">Home</a></li>
                 <li className='list-items'><a href="#favorites">Favorites</a></li>
-            </ul>   
+            </ul>
         </nav>
     );
 };
