@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pacifico&display=swap');
+
+.hero{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40vh;
+}
+
+.hero .content{
+    font-family: "Manrope", sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    height: 90%;
+}
+
+.content button{
+    position: absolute;
+    bottom: -40%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: transform 0.5s ease-in;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 0.8s linear;
+}
+
+.loading-overlay {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(128, 0, 128,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f3f3f3; 
+    border-top: 6px solid #6a0dad; 
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
