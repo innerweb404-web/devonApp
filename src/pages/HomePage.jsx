@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/pages.css';
 import { FaSyncAlt, FaHeart} from 'react-icons/fa';
-import { BounceLoader } from "react-spinners";
+import { SyncLoader } from "react-spinners";
 
 const HomePage = () => {
     const [pickUpLine, setPickUpLine] = useState('');
@@ -40,7 +40,7 @@ const HomePage = () => {
         <section className='hero'>
         <div className='content'>
             {loading ? (
-            <BounceLoader
+            <SyncLoader	
                 color='purple'
                 loading={loading}
                 size={150}

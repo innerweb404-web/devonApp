@@ -15,7 +15,7 @@ const Header = () => {
         <header className='header'>
             <div className='logo'>
                 <h2>Devon</h2>
-                <FaHeart color='purple'
+                    <FaHeart color='purple'
                 size={30}/>
             </div>
             <FaBars 

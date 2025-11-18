@@ -54,21 +54,13 @@
     z-index: 9999; 
 }
 
-.loading-spinner {
-    width: 60px;
-    height: 60px;
-    border: 6px solid #f3f3f3; 
-    border-top: 6px solid #6a0dad; 
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
 .loading-text {
     margin-top: 1rem;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
-    color: #ffffff;
+    color: rgb(94, 4, 94);
     text-align: center;
+    font-weight: 900;
 }
 
 @keyframes spin {

@@ -6,13 +6,13 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false),3000); 
+    const timer = setTimeout(() => setLoading(false),5000); 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      {loading ? <Loading text='Loading...' /> : <Layout />}
+      {loading ? <Loading text='For Lady Vivian ' /> : <Layout />}
     </>
   );
 };
